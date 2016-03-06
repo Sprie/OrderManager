@@ -71,13 +71,14 @@ public class ModifyData extends Activity {
 		get_sm.setText(salesman);
 
 		//初始化datepicker，获取用户选择的date，其余的设置默认时间必须在初始化之后
+		//其中月份从1 开始计算，所以需要moth+1
 		get_date.init(year, month, day, new OnDateChangedListener() {
 			
 			@Override
 			public void onDateChanged(DatePicker view, int year, int month, int day) {
 				// TODO Auto-generated method stub
 				ModifyData.this.year = year;
-				ModifyData.this.month = month;
+				ModifyData.this.month = month + 1;
 				ModifyData.this.day = day;
 			}
 		});

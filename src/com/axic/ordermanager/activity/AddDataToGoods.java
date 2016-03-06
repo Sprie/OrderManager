@@ -55,7 +55,7 @@ public class AddDataToGoods extends Activity {
 			public void onDateChanged(DatePicker view, int year, int month, int day) {
 				// TODO Auto-generated method stub
 				AddDataToGoods.this.year = year;
-				AddDataToGoods.this.month = month;
+				AddDataToGoods.this.month = month + 1;
 				AddDataToGoods.this.day = day;
 			}
 		});
