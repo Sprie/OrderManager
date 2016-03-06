@@ -22,4 +22,5 @@
     <string name="hint_retainage">请输入定金</string>
     <string name="hint_salesman">请输入导购员姓名</string>
     <string name="modify">修改</string>
+    <string name="version_unknown">未找到版本号</string>
 </resources>

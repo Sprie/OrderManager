@@ -23,6 +23,6 @@
     <string name="hint_retainage">Please input retainage</string>
     <string name="hint_salesman">Please input salesman</string>
     <string name="modify">modify</string>
-    
+    <string name="version_unknown">NO VERSION</string>
 
 </resources>
