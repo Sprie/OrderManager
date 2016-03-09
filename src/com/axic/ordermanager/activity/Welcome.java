@@ -25,7 +25,7 @@ public class Welcome extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.welcomeimg);
-		//启动页面显示版本名
+//		//启动页面显示版本名
 		vs = (TextView) findViewById(R.id.version);
 		vs.setText("version " + getVersion());
 		
@@ -39,8 +39,6 @@ public class Welcome extends Activity {
 			public void onAnimationStart(Animation animation) {
 				// TODO Auto-generated method stub
 				welcomeImg.setBackgroundResource(R.drawable.welcome);
-				
-				
 			}
 			
 			@Override

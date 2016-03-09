@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.axic.ordermanager"
     android:versionCode="1"
-    android:versionName="0.0.07" >
+    android:versionName="0.0.08" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.axic.ordermanager.activity.Welcome"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Start" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,12 +25,14 @@
         <activity 
             android:name="com.axic.ordermanager.activity.AddDataToGoods"
             android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
 		></activity>
 		<activity 
 		    android:name="com.axic.ordermanager.activity.ShowDataInListView"
 		></activity>
 		<activity 
 		    android:name="com.axic.ordermanager.activity.ModifyData"
+		    android:windowSoftInputMode="adjustPan"
 		></activity>
 		<activity 
 		    android:name="com.axic.ordermanager.activity.GetDataFromGoods"
