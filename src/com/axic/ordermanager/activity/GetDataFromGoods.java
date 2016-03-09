@@ -64,9 +64,9 @@ public class GetDataFromGoods extends Activity {
 		cursor.close();
 		//在textview控件中设置数值
 		show_pur.setText(purchaser);
-		show_pri.setText(price);
-		show_re.setText(retainage);
-		show_de.setText(deposit);
+		show_pri.setText(price + " 元");
+		show_re.setText(retainage + " 元");
+		show_de.setText(deposit + " 元");
 		show_sm.setText(salesman);
 		show_date.setText(date);
 

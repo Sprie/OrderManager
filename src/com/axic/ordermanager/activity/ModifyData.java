@@ -82,7 +82,8 @@ public class ModifyData extends Activity {
 				ModifyData.this.day = day;
 			}
 		});
-		get_date.updateDate(get_year, get_month, get_day);
+		//设置默认显示时间
+		get_date.updateDate(get_year, get_month - 1, get_day);
 		
 		
 		

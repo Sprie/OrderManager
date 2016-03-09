@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="back">back</string>
     <string name="order_date1">The date of order:</string>
+    <string name="date">Date</string>
     <string name="purchaser1">Purchaser:</string>
     <string name="salesman1">Salesman:</string>
     <string name="retainage1">Retainage:</string>

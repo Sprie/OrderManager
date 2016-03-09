@@ -40,8 +40,8 @@ public class ShowDataInListView extends ListActivity {
 		//创建一个SimpleAdater适配器
 		SimpleAdapter adapter = new SimpleAdapter(this, getData(), 
 				R.layout.listview, 
-				new String[] { "purchaser", "salesman"}, 
-				new int[] {R.id.listpurchaser, R.id.listsalesman});
+				new String[] { "purchaser", "salesman", "date"}, 
+				new int[] {R.id.listpurchaser, R.id.listsalesman, R.id.listdate});
 		listView.setAdapter(adapter);
 //		setListAdapter(adapter);
 		//创建listview点击事件
@@ -62,6 +62,7 @@ public class ShowDataInListView extends ListActivity {
 		Map<String, Object> map;
 		String purchaser;
 		String salesman;
+		String date;
 		
 		//遍历数据库 取出数据
 		SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -73,10 +74,12 @@ public class ShowDataInListView extends ListActivity {
 				//获取数据库的值
 				purchaser = cursor.getString(cursor.getColumnIndex("purchaser"));
 				salesman= cursor.getString(cursor.getColumnIndex("salesman"));
+				date = cursor.getString(cursor.getColumnIndex("date"));
 				//将键与值绑定
 				
 				map.put("salesman", salesman);
 				map.put("purchaser", purchaser);
+				map.put("date", date);
 				//添加进list列表
 				list.add(map);
 			}while (cursor.moveToNext());

@@ -19,16 +19,19 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddDataToGoods extends Activity {
 
 	private GoodsImformation database;
-	private EditText purchaser,price,deposit,retainage,salesman;
+	private EditText purchaser,price,deposit,salesman;
+//	private TextView retainage;
 	private DatePicker datepicker;
 	private int year, month, day;
 	private String date;
 	private int now_year,now_month,now_day;
+	
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,7 +41,7 @@ public class AddDataToGoods extends Activity {
 		purchaser = (EditText) findViewById(R.id.add_purchaser);
 		price = (EditText) findViewById(R.id.add_price);
 		deposit = (EditText) findViewById(R.id.add_deposit);
-		retainage = (EditText) findViewById(R.id.add_retainage);
+//		retainage = (TextView) findViewById(R.id.add_retainage);
 		salesman = (EditText) findViewById(R.id.add_salesman);
 		datepicker = (DatePicker) findViewById(R.id.datepicker);
 //		datepicker.updateDate(2016, 1, 1);
@@ -74,9 +77,14 @@ public class AddDataToGoods extends Activity {
 				// TODO Auto-generated method stub
 				String pur = purchaser.getText().toString();
 				String pri = price.getText().toString();
-				String hm = deposit.getText().toString();
-				String lm = retainage.getText().toString();
+				String de = deposit.getText().toString();
+//				String lm = retainage.getText().toString();
 				String sm = salesman.getText().toString();
+				//将尾款计算出来
+				float priceCount = Float.parseFloat(pri);
+				float depositCount = Float.parseFloat(de);
+				float retainageCount = priceCount - depositCount;
+//				retainage.setText(retainageCount);
 				date = year + "-" + month + "-" + day ;Log.d("date", date + "");
 
 				SQLiteDatabase goods = database.getWritableDatabase();
@@ -85,8 +93,8 @@ public class AddDataToGoods extends Activity {
 				Log.d("message", pur);
 				values.put("purchaser", pur);
 				values.put("price", pri);
-				values.put("deposit", hm);
-				values.put("retainage", lm);
+				values.put("deposit", de);
+				values.put("retainage", retainageCount);
 				values.put("salesman", sm);
 				values.put("date", date);
 				goods.insert("Goods", null, values);
@@ -114,7 +122,7 @@ public class AddDataToGoods extends Activity {
 		purchaser.setText("");
 		price.setText("");
 		deposit.setText("");
-		retainage.setText("");
+//		retainage.setText("");
 		salesman.setText("");
 		datepicker.updateDate(now_year, now_month, now_day);
 		//使控件purchaser获取焦点

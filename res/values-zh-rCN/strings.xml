@@ -4,11 +4,12 @@
     <string name="action_settings">设置</string>
     <string name="back">返回</string>
     <string name="order_date1">下单时间：</string>
+    <string name="date">下单时间</string>
     <string name="purchaser1">订货人：</string>
     <string name="salesman1">导购员：</string>
-    <string name="retainage1">尾款：</string>
-    <string name="deposit1">定金：</string>
-    <string name="total_price1">总价：</string>
+    <string name="retainage1">尾　款：</string>
+    <string name="deposit1">定　金：</string>
+    <string name="total_price1">总　价：</string>
     <string name="order_details">订单详情</string>
     <string name="all_order">全部订单</string>
     <string name="purchaser">订货人</string>
@@ -18,8 +19,8 @@
     <string name="view_all_order">查看全部订单</string>
     <string name="hint_purchaser">请输入订货人姓名</string>
     <string name="hint_total_price">请输入总价</string>
-    <string name="hint_deposit">请输入尾款</string>
-    <string name="hint_retainage">请输入定金</string>
+    <string name="hint_deposit">请输入定金</string>
+    <string name="hint_retainage">请输入尾款</string>
     <string name="hint_salesman">请输入导购员姓名</string>
     <string name="modify">修改</string>
     <string name="version_unknown">未找到版本号</string>
